@@ -93,6 +93,7 @@ body {
   align-items: center;
 }
 
+
 .menu-item:not(:last-child) {
   margin-right: 40px;
 }
@@ -123,6 +124,19 @@ body {
 .menu-link:focus {
   color: var(--accent-color);
 }
+
+.menu-link::after {
+  position: absolute;
+  display: block;
+  width: 48px;
+  height: 4px;
+background: #404BBF;
+border-radius: 2px;
+content: "";
+margin: 0 auto;
+margin-top: 24px;
+}
+
 
 .contact {
   margin-right: 40px;
@@ -242,10 +256,6 @@ body {
   margin-bottom: 8px;
   justify-content: center;
   align-items: center;
-}
-
-.discrip-icon {
-  
 }
 
 .subtitle-discrip {
