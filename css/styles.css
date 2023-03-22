@@ -135,8 +135,8 @@ body {
 background: #404BBF;
 border-radius: 2px;
 content: "";
-margin: 0 auto;
-margin-top: 22px;
+left: 0;
+bottom: -28px;
 }
 
 .active {
@@ -573,7 +573,7 @@ margin-top: 22px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--color-iris);
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons:hover,
@@ -616,6 +616,7 @@ margin-top: 22px;
 
 .picture-card-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .picture-card-img {
@@ -650,7 +651,6 @@ margin-top: 22px;
 .picture-card-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
   0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  display: block;
 }
 
 .picture-card-content-wrapper {
@@ -705,7 +705,7 @@ margin-top: 22px;
 .modal {
   position: absolute;
   width: 408px;
-  height: 576px;
+  min-height: 576px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -723,8 +723,17 @@ margin-top: 22px;
   align-items: center;
   width: 24px;
   height: 24px;
+  padding: 0;
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #E7E9FC;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  fill: #ffffff;
+  background: #404BBF;
+  border: 1px solid transparent;
 }
